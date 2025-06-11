@@ -6,5 +6,5 @@ declare module "h3" {
     user?: Omit<User, "id"> & {
       id: number;
     };
-  };
+  }
 }
