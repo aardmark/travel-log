@@ -1,0 +1,1 @@
+export const CENTER_MAGNETIC_ISLAND = [146.8517, -19.1551];
