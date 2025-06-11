@@ -2,8 +2,8 @@ import { createAuthClient } from "better-auth/vue";
 
 const authClient = createAuthClient();
 
-export const useAuthStore = defineStore("authStore", () => {
-  const session = ref<Awaited<ReturnType<typeof authClient.useSession> | null>>(null);
+export const useAuthStore = defineStore("useAuthStore", () => {
+  const session = ref<Awaited<ReturnType<typeof authClient.useSession>> | null>(null);
 
   async function init() {
     const data = await authClient.useSession(useFetch);
@@ -35,8 +35,7 @@ export const useAuthStore = defineStore("authStore", () => {
       fetchOptions: {
         headers,
       },
-    },
-    );
+    });
     navigateTo("/");
   }
 
